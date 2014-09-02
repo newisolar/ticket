@@ -1,13 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang='en'>
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <meta content='all' name='robots'>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!--[if IE]> <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'> <![endif]-->
+    <link href="{{ asset('bundles/newicore/css/bootstrap/bootstrap.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <!-- / theme file [required] -->
+    <link href="{{ asset('bundles/newicore/css/light-theme.css') }}" media="all" id="color-settings-body-color" rel="stylesheet" type="text/css" />
+    <!-- / coloring file [optional] (if you are going to use custom contrast color) -->
+    <link href="{{ asset('bundles/newicore/css/theme-colors.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="{{ asset('bundles/newicore/js/ie/html5shiv.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/newicore/js/ie/respond.min.js') }}" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body class='contrast-green fixed-header fixed-navigation'>
+<header>
+    <nav class='navbar navbar-default navbar-fixed-top'>
+        <a class='navbar-brand' href='index.html'>
+            NEWOLUTION
+        </a>
+        <a class='toggle-nav btn pull-left' href='#'>
+            <i class='fa fa-bars'></i>
+        </a>
+    </nav>
+</header>
+<div id='wrapper'>
+    <div id='main-nav-bg'></div>
+    <nav class='main-nav-fixed' id='main-nav'>
+        <div class='navigation'>
+            <ul class='nav nav-stacked'>
+                <li class=''>
+                    <a href='{{ path('newi_ticket_homepage') }}'>
+                        <i class='fa fa-tachometer'></i>
+                        <span>Tickets</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id='content'>
+        <div class='container'>
+            <div class='row' id='content-wrapper'>
+                <div class='col-xs-12'>
+                    <div class='row'>
+                        <div class='col-sm-12'>
+                            <div class='page-header'>
+                                <h1 class='pull-left'>
+                                    <span>{% block pageTitle%}{% endblock pageTitle %}</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            </div>
+            <footer id='footer'>
+                <div class='footer-wrapper'>
+                    <div class='row'>
+                        <div class='col-sm-6 text'>
+                            Copyright © 2014 NEWI-SOLAR GmbH
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</div>
+<!-- / jquery [required] -->
+<script src="{{ asset('bundles/newicore/js/jquery/jquery.min.js') }}" type="text/javascript"></script>
+<!-- / jquery mobile (for touch events) -->
+<script src="{{ asset('bundles/newicore/js/jquery/jquery.mobile.custom.min.js') }}" type="text/javascript"></script>
+<!-- / jquery migrate (for compatibility with new jquery) [required] -->
+<script src="{{ asset('bundles/newicore/js/jquery/jquery-migrate.min.js') }}" type="text/javascript"></script>
+<!-- / jquery ui -->
+<script src="{{ asset('bundles/newicore/js/jquery/jquery-ui.min.js') }}" type="text/javascript"></script>
+<!-- / bootstrap [required] -->
+<script src="{{ asset('bundles/newicore/js/bootstrap/bootstrap.min.js') }}" type="text/javascript"></script>
+<!-- / theme file [required] -->
+<script src="{{ asset('bundles/newicore/js/theme.js') }}" type="text/javascript"></script>
+</body>
 </html>

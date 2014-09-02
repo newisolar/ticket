@@ -1,0 +1,7 @@
+parameters:
+#    newi_ticket.example.class: NEWI\TicketBundle\Example
+
+services:
+#    newi_ticket.example:
+#        class: %newi_ticket.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

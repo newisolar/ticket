@@ -1,0 +1,8 @@
+newi_core:
+    resource: "@NEWICoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+newi_ticket:
+    resource: "@NEWITicketBundle/Resources/config/routing.yml"
+    prefix:   /
+

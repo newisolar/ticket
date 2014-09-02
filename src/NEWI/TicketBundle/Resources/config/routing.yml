@@ -1,0 +1,3 @@
+newi_ticket_homepage:
+    path:     /
+    defaults: { _controller: NEWITicketBundle:Ticket:index }
